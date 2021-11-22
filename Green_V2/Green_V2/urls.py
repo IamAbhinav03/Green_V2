@@ -24,6 +24,7 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('account.urls')),
     path('', include('frontend.urls')),
+    path('reuse/', include('core.urls'), name='reuse')
     # path('accounts/signup/', register_request, name='register')
 ]
 if settings.DEBUG:

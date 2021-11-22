@@ -23,7 +23,7 @@ def empty(request):
 def profile(request):
 	user = request.user
 	username = user.username
-	con = Account.objects.get(user=user)
+	con = Account.objects.get(username=username)
 	points = con.points
 	return render(request, 'Profile.html', {'username': username, 'points': points})
 

@@ -41,7 +41,8 @@ INSTALLED_APPS = [
 
     #local
     'account',
-    'frontend'
+    'frontend',
+    'core',
 ]
 
 MIDDLEWARE = [
