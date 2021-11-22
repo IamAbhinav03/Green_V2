@@ -15,7 +15,7 @@ def register_request(request):
 		if form.is_valid():
 			user = form.save()
 			login(request, user)
-			return redirect("/accounts/test")
+			return redirect("/")
 		print("Not valid")
 		messages.error(request, "Unsuccessful registration. Invalid information")
 	form = NewUserForm(auto_id=False)
@@ -27,7 +27,7 @@ def staff_register_request(request):
 		if form.is_valid():
 			user = form.save()
 			login(request, user)
-			return redirect("accounts/test")
+			return redirect("/")
 		print("Not valid")
 		messages.error(request, "Unsuccessful registration. Invalid information")
 	form = NewStaffForm(auto_id=False)
